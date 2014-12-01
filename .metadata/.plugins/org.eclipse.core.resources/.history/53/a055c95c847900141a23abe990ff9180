@@ -1,0 +1,7 @@
+//Emmanuel Farrar
+//VFW 1411
+//Project 1
+
+//create background
+Ti.UI.setbackgroundColor("#fff");
+

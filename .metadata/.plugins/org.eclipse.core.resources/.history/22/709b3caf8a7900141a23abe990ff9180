@@ -1,0 +1,28 @@
+//Emmanuel Farrar
+//VFW 1411
+//Project 1
+
+//create background
+Ti.UI.setBackgroundColor("#fff");
+
+//create main Window
+var mainWindow = Ti.UI.createWindow({
+	backgroundColor: "#333",
+});
+
+//create top view to display changing text
+var myfirstView = Ti.UI.createView({
+	backgroundColor: "fff",
+	borderRadius: 5,
+	borderWidth: 1,
+	top: 20,
+	left: 20,
+	right: 20,
+	bottom: 200
+	
+});
+
+//call views
+mainWindow.add(myfirstView);
+mainWindow.open();
+
