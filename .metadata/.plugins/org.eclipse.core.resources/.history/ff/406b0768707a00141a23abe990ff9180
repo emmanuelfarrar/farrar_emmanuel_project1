@@ -85,19 +85,17 @@ var rightbuttonText = Ti.UI.createLabel({
 
 //function to alter main window text from clicking next
 var nextClick = function (){
-	arrayCounter++;
 	//textLabel.text = quotes[arrayCounter];
 	console.log(quotes[arrayCounter]);
-
+	arrayCounter++;
+	
 };
 
 //function to alter main window text from clicking next
 var previousClick = function (){
-	arrayCounter--;
 	//textLabel.text = quotes[arrayCounter];
 	console.log(quotes[arrayCounter]);
-	
-	
+	arrayCounter--;
 	
 };
 

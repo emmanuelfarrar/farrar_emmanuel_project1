@@ -2,13 +2,6 @@
 //VFW 1411
 //Project 1
 
-//array
-var quotes = ["I have the power!", "KAMEHAMEHA!!!!!!", "Autobots Transform!", "I'm Batman", 
-"I am Groot", "And I'll form the head"];
-
-//counter for tracking of place in array
-var arrayCounter = 0;
-
 //create background
 Ti.UI.setBackgroundColor("#fff");
 
@@ -59,7 +52,7 @@ var mythirdView = Ti.UI.createView({
 //create text and labels
 //intial window text
 var  textLabel = Ti.UI.createLabel({
-	text: quotes[0],
+	text: "Enter text here",
 	font: {fontSize: 24, fontFamily: "Roboto"},
 	textAlign: "center"
 	
@@ -83,28 +76,15 @@ var rightbuttonText = Ti.UI.createLabel({
 	
 });
 
-//function to alter main window text from clicking next
-var nextClick = function (){
-	arrayCounter++;
-	//textLabel.text = quotes[arrayCounter];
-	console.log(quotes[arrayCounter]);
-
-};
-
-//function to alter main window text from clicking next
-var previousClick = function (){
-	arrayCounter--;
-	//textLabel.text = quotes[arrayCounter];
-	console.log(quotes[arrayCounter]);
-	
-	
+//function to alter text
+var changeText = function (){
+	textLabel.text = "New Text";
 	
 };
-
 
 //create event listeners
-mysecondView.addEventListener("click", previousClick);
-mythirdView.addEventListener("click", nextClick);
+mysecondView.addEventListener("click", changeText);
+mythirdView.addEventListener("click", changeText);
 
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);
