@@ -83,7 +83,7 @@ var changeText = function (){
 };
 
 //create event listeners
-mythirdView.addEventListener("click", changeText);
+mysecondView.addEventListener("click", changeText);
 
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);

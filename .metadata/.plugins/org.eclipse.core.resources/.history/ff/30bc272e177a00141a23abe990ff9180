@@ -76,15 +76,6 @@ var rightbuttonText = Ti.UI.createLabel({
 	
 });
 
-//function to alter text
-var changeText = function (){
-	textLabel.text = "New Text";
-	
-};
-
-//create event listeners
-mythirdView.addEventListener("click", changeText);
-
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);
 myfirstView.add(textLabel);
