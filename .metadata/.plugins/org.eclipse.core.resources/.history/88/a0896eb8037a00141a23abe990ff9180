@@ -59,7 +59,7 @@ var  textLabel = Ti.UI.createLabel({
 });
 
 //left button text
-var leftbuttonText = Ti.UI.createLabel({
+var  leftbuttonText = Ti.UI.createLabel({
 	color: "white",
 	text: "Previous",
 	font: {fontSize: 18, fontFamily: "Roboto"},
@@ -68,7 +68,7 @@ var leftbuttonText = Ti.UI.createLabel({
 });
 
 //right button text
-var rightbuttonText = Ti.UI.createLabel({
+var rbuttonText = Ti.UI.createLabel({
 	color: "white",
 	text: "Next",
 	font: {fontSize: 18, fontFamily: "Roboto"},
@@ -79,7 +79,5 @@ var rightbuttonText = Ti.UI.createLabel({
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);
 myfirstView.add(textLabel);
-mysecondView.add(leftbuttonText);
-mythirdView.add(rightbuttonText);
 mainWindow.open();
 

@@ -50,7 +50,6 @@ var mythirdView = Ti.UI.createView({
 });
 
 //create text and labels
-//intial window text
 var  textLabel = Ti.UI.createLabel({
 	text: "Enter text here",
 	font: {fontSize: 24, fontFamily: "Roboto"},
@@ -58,28 +57,8 @@ var  textLabel = Ti.UI.createLabel({
 	
 });
 
-//left button text
-var leftbuttonText = Ti.UI.createLabel({
-	color: "white",
-	text: "Previous",
-	font: {fontSize: 18, fontFamily: "Roboto"},
-	textAlign: "center"
-	
-});
-
-//right button text
-var rightbuttonText = Ti.UI.createLabel({
-	color: "white",
-	text: "Next",
-	font: {fontSize: 18, fontFamily: "Roboto"},
-	textAlign: "center"
-	
-});
-
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);
 myfirstView.add(textLabel);
-mysecondView.add(leftbuttonText);
-mythirdView.add(rightbuttonText);
 mainWindow.open();
 
