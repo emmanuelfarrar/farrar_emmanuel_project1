@@ -9,6 +9,7 @@ var quotes = ["I have the power!", "KAMEHAMEHA!!!!!!", "Autobots Transform!", "I
 //counter for tracking of place in array
 var arrayCounter = 0;
 
+
 //create background
 Ti.UI.setBackgroundColor("#fff");
 
@@ -85,7 +86,12 @@ var rightbuttonText = Ti.UI.createLabel({
 
 //function to alter main window text from clicking next
 var nextClick = function (){
-	arrayCounter++;
+	if (arrayCounter <= quotes.length - 2){
+	arrayCounter++;	
+	}else{
+		arrayCounter = 0;
+	}
+	
 	//textLabel.text = quotes[arrayCounter];
 	console.log(quotes[arrayCounter]);
 
@@ -93,13 +99,16 @@ var nextClick = function (){
 
 //function to alter main window text from clicking next
 var previousClick = function (){
-	arrayCounter--;
+	if (arrayCounter > 0){
+	arrayCounter--;	
+	}else{
+		arrayCounter = 5;
+	}
 	//textLabel.text = quotes[arrayCounter];
 	console.log(quotes[arrayCounter]);
-	
-	
-	
+		
 };
+
 
 
 //create event listeners
