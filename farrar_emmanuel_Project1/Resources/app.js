@@ -2,20 +2,13 @@
 //VFW 1411
 //Project 1
 
-//array
-var quotes = ["I have the power!", "KAMEHAMEHA!!!!!!", "Autobots Transform!", "I'm Batman", 
-"I am Groot", "And I'll form the head"];
-
-//counter for tracking of place in array
-var arrayCounter = 0;
-
 
 //create background
 Ti.UI.setBackgroundColor("#fff");
 
 //create main Window
 var mainWindow = Ti.UI.createWindow({
-	backgroundColor: "#333",
+	backgroundColor: "#333"
 });
 
 //create top view to display changing text
@@ -26,8 +19,7 @@ var myfirstView = Ti.UI.createView({
 	height: 250,
 	top: 20,
 	left: 20,
-	right: 20
-	
+	right: 20	
 	
 });
 
@@ -59,12 +51,12 @@ var mythirdView = Ti.UI.createView({
 
 //create text and labels
 //intial window text
-var  textLabel = Ti.UI.createLabel({
-	text: quotes[0],
+var textLabel = Ti.UI.createLabel({
+	text: "List of Quotes",
 	font: {fontSize: 24, fontFamily: "Roboto"},
 	textAlign: "center"
-	
 });
+
 
 //left button text
 var leftbuttonText = Ti.UI.createLabel({
@@ -84,36 +76,7 @@ var rightbuttonText = Ti.UI.createLabel({
 	
 });
 
-//function to alter main window text from clicking next
-var nextClick = function (){
-	if (arrayCounter <= quotes.length - 2){
-	arrayCounter++;	
-	}else{
-		arrayCounter = 0;
-	}
-	
-	//textLabel.text = quotes[arrayCounter];
-	console.log(quotes[arrayCounter]);
-
-};
-
-//function to alter main window text from clicking next
-var previousClick = function (){
-	if (arrayCounter > 0){
-	arrayCounter--;	
-	}else{
-		arrayCounter = 5;
-	}
-	//textLabel.text = quotes[arrayCounter];
-	console.log(quotes[arrayCounter]);
-		
-};
-
-
-
-//create event listeners
-mysecondView.addEventListener("click", previousClick);
-mythirdView.addEventListener("click", nextClick);
+var loadFile = require("quoteFile");
 
 //call views
 mainWindow.add(myfirstView, mysecondView, mythirdView);

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;farrar_emmanuel_Project1/Resources/function.js&apos; to &apos;quoteFile.js&apos;" description="Rename resource &apos;function.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/function.js" name="quoteFile.js" stamp="1417566401178" updateReferences="true"/>
+</session>
